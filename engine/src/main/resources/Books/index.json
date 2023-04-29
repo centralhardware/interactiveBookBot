@@ -1,0 +1,106 @@
+[
+  {
+    "id": "d1010aad-696e-4f2a-82bb-1c6b0c0a1031",
+    "name": "Дневник сумасшедшей мумии Стайн Р. Л.",
+    "path": "dnevnik_sumashedshey_mumii",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "9d54b68f-b570-4e60-aedb-67218fb6c46c",
+    "name": "Ночь в лесу оборотней Стайн Р. Л.",
+    "path": "noch_v_lesu_oborotney",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "0c58abf8-5e6f-46bf-b057-790c8d4f0da1",
+    "name": "Escape from the carnival of horrors R.L. Stine",
+    "path": "escape_from_the_carnival_of_horrors",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "eng",
+    "enabled": true
+  },
+  {
+    "id": "0620ee49-648a-42c0-b486-722297c07a7f",
+    "name": "Лифт в никуда Стайн Р. Л.",
+    "path": "livt_v_nikuda",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "dc758e9f-1aee-4119-9aff-053aea81ed06",
+    "name": "Наперегонки с торнадо Стайн Р. Л.",
+    "path": "naperegonki_s_tornado",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "c61871e7-032b-4eb0-b376-0657b15efbb6",
+    "name": "ты - удобрения для растений Стайн Р. Л.",
+    "path": "ti_udobrenie_dly_rasteniy",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "2112dc0e-0dd5-483b-a734-106a5eadd61a",
+    "name": "Заклятие чародея Стайн Р. Л.",
+    "path": "zaklyatie_charodey",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "88312bfd-8a0d-4460-86ba-4d4c7ce28ca9",
+    "name": "Кошмар на весь день Стайн Р. Л.",
+    "path": "koshmar_na_ves_den",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "b8857d0a-3241-4ba1-ba14-b31446aa0758",
+    "name": "Он явился из интернета  Стайн Р. Л.",
+    "path": "on_yavilsa_is_interneta",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "63342777-987e-4ecd-ab90-c6ed9cfaeefa",
+    "name": "Ужас фокуса-покуса  Стайн Р. Л.",
+    "path": "uzas_fokusa_pokusa",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "25bcac08-20f5-4a33-bf4f-a2ce6c2d3554",
+    "name": "Оживший манекен  Стайн Р. Л.",
+    "path": "ozivshiy_maneken",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "ec43ddd7-f996-406c-8a22-0c70da885828",
+    "name": "Каникулы в джунглях  Стайн Р. Л.",
+    "path": "kanikuli_v_junglyh",
+    "authorId": "895d212d-7d6f-4ee0-977f-eebdbce864e1",
+    "lang": "rus",
+    "enabled": true
+  },
+  {
+    "id": "953172be-47ce-46fc-b0e3-b585cf40c909",
+    "name": "Путешествие на дно моря Монтгомери Р.",
+    "path": "putisestvie_na_dno_okeana",
+    "authorId": "7f6e1d0e-0745-4b13-b296-6e25236c2f58",
+    "lang": "rus",
+    "enabled": true
+  }
+]

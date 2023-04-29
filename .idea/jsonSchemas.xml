@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="bookSchema">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="bookSchema" />
+              <option name="relativePathToSchema" value="engine/src/main/resources/bookSchema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="engine/src/main/resources/Books/dnevnik_sumashedshey_mumii/content.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="indexSchema">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="indexSchema" />
+              <option name="relativePathToSchema" value="engine/src/main/resources/indexSchema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="engine/src/main/resources/Books/index.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>
