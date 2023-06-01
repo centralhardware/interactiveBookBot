@@ -1,8 +1,8 @@
-package com.centralhardware.telegram.interactiveBookBot;
+package me.centralhardware.telegram.interactiveBookBot;
 
-import com.centralhardware.telegram.interactiveBookBot.engine.Model.Next;
-import com.centralhardware.telegram.interactiveBookBot.engine.Model.Part;
-import com.centralhardware.telegram.interactiveBookBot.engine.Model.Variant;
+import me.centralhardware.telegram.interactiveBookBot.engine.Model.Next;
+import me.centralhardware.telegram.interactiveBookBot.engine.Model.Part;
+import me.centralhardware.telegram.interactiveBookBot.engine.Model.Variant;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Resources;
 import org.apache.commons.lang3.math.NumberUtils;
