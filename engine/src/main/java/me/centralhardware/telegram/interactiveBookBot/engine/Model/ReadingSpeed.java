@@ -4,7 +4,7 @@ public enum ReadingSpeed {
 
     HIGH(250, 150),
     MIDDLE(200, 100),
-    SLOW(150, 500);
+    SLOW(150, 50);
 
     private final Integer rus;
     private final Integer eng;
