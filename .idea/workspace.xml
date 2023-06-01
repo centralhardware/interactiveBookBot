@@ -7,11 +7,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80f1d729-62b1-40a7-8349-071c4afc78be" name="Changes" comment="fix NPE when is premium is null">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/centralhardware/telegram/interactiveBookBot/bot/TelegramUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/centralhardware/telegram/interactiveBookBot/bot/TelegramUtil.java" afterDir="false" />
+    <list default="true" id="80f1d729-62b1-40a7-8349-071c4afc78be" name="Changes" comment="remove">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="github" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -44,32 +46,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "/Users/alex/IdeaProjects/interactiveBookBot",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "settings.json.schema",
-    "spring.configuration.checksum": "86987ed93ed80b14febbc3941f5634f3",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alex/IdeaProjects/interactiveBookBot/engine/src/main/resources/Books/ozivshiy_maneken/image&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.json.schema&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ],
-    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": [
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/engine/src/main/resources/Books/ozivshiy_maneken/image" />
@@ -140,12 +139,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
@@ -164,8 +157,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682707547000</updated>
-      <workItem from="1685355677194" duration="115000" />
-      <workItem from="1685355805009" duration="203000" />
+    </task>
+    <task id="LOCAL-00056" summary="add workflow to update prod with latest docker">
+      <created>1683314866959</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1683314866960</updated>
     </task>
     <task id="LOCAL-00057" summary="delete update prod job">
       <created>1683315381497</created>
@@ -503,18 +501,8 @@
       <option name="project" value="LOCAL" />
       <updated>1684349150847</updated>
     </task>
-    <task id="LOCAL-00105" summary="fix NPE when is premium is null">
-      <created>1684698529228</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1684698529228</updated>
-    </task>
-    <option name="localTasksCounter" value="106" />
+    <option name="localTasksCounter" value="105" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
@@ -539,6 +527,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="update start text,&#10;add book Ужас фокуса-покуса" />
     <MESSAGE value="fix sending choose book when receive unhandled message" />
     <MESSAGE value="refactor message processing" />
     <MESSAGE value="fix critical bug when bot share state betwen users" />
@@ -563,8 +552,7 @@
     <MESSAGE value="add book оживший маникен" />
     <MESSAGE value="add individual speed for languages" />
     <MESSAGE value="add ability подбросить монетку" />
-    <MESSAGE value="fix NPE when is premium is null" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix NPE when is premium is null" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ability подбросить монетку" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

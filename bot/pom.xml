@@ -53,7 +53,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.centralhardware.telegram.interactiveBookBot.Main</mainClass>
+                                    <mainClass>me.centralhardware.telegram.interactiveBookBot.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
