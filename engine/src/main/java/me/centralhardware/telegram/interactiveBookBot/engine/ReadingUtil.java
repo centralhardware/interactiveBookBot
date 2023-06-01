@@ -4,6 +4,7 @@ import me.centralhardware.telegram.interactiveBookBot.engine.Storage.CurrentUser
 import me.centralhardware.telegram.interactiveBookBot.engine.cache.RedisCache;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.stereotype.Component;
 
 import java.util.StringTokenizer;
@@ -17,11 +18,13 @@ public class ReadingUtil {
     private final RedisCache cache;
 
     public int getReadingTime(String text){
-        if (cache.contains(text)) return cache.get(text);
+        Integer readingSpeed = currentUser.getReadingSpeed();
+
+        if (cache.contains(Pair.of(text, readingSpeed))) return cache.get(Pair.of(text, readingSpeed));
 
         var delay = getDelay(text);
 
-        cache.set(text, delay);
+        cache.set(Pair.of(text, readingSpeed), delay);
         log.info("Calculated delay {} seconds saved to cache(size {}) for text {}",
                 delay,
                 cache.size(),

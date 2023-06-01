@@ -5,11 +5,12 @@ import me.centralhardware.telegram.interactiveBookBot.engine.redis.Redis;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.BooleanUtils;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class RedisCache  implements Cache<String, Integer> {
+public class RedisCache  implements Cache<Pair<String, Integer>, Integer> {
 
     private static final String CACHE_VALUE_PREFIX = "cache:";
     private static final String CACHE_VALUE_PATTERN = "cache:*";
@@ -25,18 +26,18 @@ public class RedisCache  implements Cache<String, Integer> {
     }
 
     @Override
-    public void set(String key, Integer value) {
-        redis.put(key(hasher.hash(key)), value);
+    public void set(Pair<String, Integer> key, Integer value) {
+        redis.put(key(hasher.hash(key.getLeft()), key.getRight()), value);
     }
 
     @Override
-    public Integer get(String key) {
-        return Integer.parseInt(redis.get(key(hasher.hash(key))));
+    public Integer get(Pair<String, Integer> key) {
+        return Integer.parseInt(redis.get(key(hasher.hash(key.getLeft()), key.getRight())));
     }
 
     @Override
-    public boolean contains(String key) {
-        return redis.exists(key(hasher.hash(key)));
+    public boolean contains(Pair<String, Integer> key) {
+        return redis.exists(key(hasher.hash(key.getLeft()), key.getRight()));
     }
 
     @Override
@@ -50,8 +51,8 @@ public class RedisCache  implements Cache<String, Integer> {
                 .forEach(redis::delete);
     }
 
-    private String key(String key){
-        return CACHE_VALUE_PREFIX + key;
+    private String key(String key, Integer readingSpeed){
+        return CACHE_VALUE_PREFIX + key + ":" + readingSpeed;
     }
 
 
