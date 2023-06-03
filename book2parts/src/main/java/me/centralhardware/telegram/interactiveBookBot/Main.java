@@ -19,8 +19,8 @@ public class Main {
     private static final ObjectMapper mapper = new ObjectMapper();
 
     public static void main(String[] args) throws IOException {
-        String book = Resources.toString(Resources.getResource("putisestvie_na_dno_okeana.txt"),
-                Charset.forName("UTF-8"));
+        String book = Resources.toString(Resources.getResource(args[0]),
+                Charset.forName(args[1]));
 
         List<Part> parts = new ArrayList<>();
 
