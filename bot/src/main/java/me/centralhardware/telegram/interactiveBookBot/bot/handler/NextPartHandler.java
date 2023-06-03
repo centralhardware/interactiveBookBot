@@ -8,6 +8,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 
+/**
+ * Handle callback with next book part
+ */
 @Component
 @RequiredArgsConstructor
 public class NextPartHandler extends CallbackHandler {

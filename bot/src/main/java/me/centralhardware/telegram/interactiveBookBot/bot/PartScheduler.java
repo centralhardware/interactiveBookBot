@@ -20,6 +20,10 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+/**
+ * Schedule book part paragraph sending.
+ * For already opened part, send all paragraphs immediately.
+ */
 @Component
 @RequiredArgsConstructor
 @Slf4j
@@ -32,14 +36,27 @@ public class PartScheduler {
     private final ReadingUtil readingUtil;
     private final Redis redis;
 
+    /**
+     * Create {@link Timer} instance per user.
+     */
     private final Map<Long, Timer> chatid2timer = new HashMap<>();
+    /**
+     * Store running status per user.
+     */
     private final Map<Long, Boolean> chatid2running = new HashMap<>();
 
 
+    /**
+     * @return True, if paragraph sending in progress
+     */
     public boolean isRunning(){
         return chatid2running.getOrDefault(currentUser.getChatId(), false);
     }
 
+    /**
+     * Cancel paragraphs sending.
+     * Used when received /start command.
+     */
     public void cancel(){
         if (!chatid2timer.containsKey(currentUser.getChatId())) return;
 

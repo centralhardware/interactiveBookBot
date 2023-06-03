@@ -44,6 +44,8 @@ public class TelegramSender {
                     absSender.execute(deleteMessage);
                 } else if (method instanceof AnswerCallbackQuery answerCallbackQuery){
                     absSender.execute(answerCallbackQuery);
+                } else if (method instanceof SendChatAction sendChatAction){
+                    absSender.execute(sendChatAction);
                 }
                 telegramUtil.saveStatisticOutcome(method);
 

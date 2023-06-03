@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.AnswerCallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 
+/**
+ * Process callback with head or tail game.
+ * Just randomly show popup with 'орел' or 'решка'
+ */
 @Component
 @RequiredArgsConstructor
 public class HeadOrTailHandler extends CallbackHandler{

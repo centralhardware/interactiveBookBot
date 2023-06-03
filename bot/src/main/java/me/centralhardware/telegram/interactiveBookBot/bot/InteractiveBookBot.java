@@ -26,6 +26,7 @@ public class InteractiveBookBot extends TelegramLongPollingBot {
 
     @PostConstruct
     public void init(){
+        // can't inject by spring due to cycle dependency error
         sender.setAbsSender(this);
     }
 
@@ -52,6 +53,10 @@ public class InteractiveBookBot extends TelegramLongPollingBot {
                 .forEach(it -> it.handle(callbackQuery));
     }
 
+    /**
+     * Process /start command
+     * @return True, if handled
+     */
     public boolean sendStartMessage(Update update) {
         if (!update.hasMessage() || !update.getMessage().getText().equals("/start")) return false;
 

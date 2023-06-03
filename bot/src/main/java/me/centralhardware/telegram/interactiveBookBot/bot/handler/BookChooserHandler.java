@@ -12,6 +12,10 @@ import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 
 import java.util.UUID;
 
+/**
+ * Handle book choose callback query
+ * Callback data must contain UUID.
+ */
 @Component
 @RequiredArgsConstructor
 public class BookChooserHandler extends CallbackHandler{

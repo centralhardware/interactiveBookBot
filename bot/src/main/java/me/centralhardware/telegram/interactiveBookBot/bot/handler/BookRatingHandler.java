@@ -9,9 +9,14 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 
+/**
+ * Handler callback with book rating
+ */
 @Component
 @RequiredArgsConstructor
 public class BookRatingHandler extends CallbackHandler{
+
+    public static final String BOOK_RATING_CALLBACK_PREFIX = "bookRating";
 
     private final Redis redis;
     private final Engine engine;
@@ -34,6 +39,6 @@ public class BookRatingHandler extends CallbackHandler{
 
     @Override
     boolean isAcceptable(String data) {
-        return data.startsWith("bookRating");
+        return data.startsWith(BOOK_RATING_CALLBACK_PREFIX);
     }
 }

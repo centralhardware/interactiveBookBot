@@ -23,6 +23,9 @@ public class TelegramBotInterceptor {
     private final Engine engine;
     private final PartScheduler partScheduler;
 
+    /**
+     * Init storage for user and save statistic to clickhouse
+     */
     public void process(Update update)  {
         currentUser.setChatId(telegramUtil.getUserId(update));
 

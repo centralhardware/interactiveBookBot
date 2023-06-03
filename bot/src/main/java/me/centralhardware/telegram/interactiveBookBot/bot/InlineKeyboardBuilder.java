@@ -7,6 +7,9 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Construct inline button keyboard
+ */
 public class InlineKeyboardBuilder {
 
     private final List<List<InlineKeyboardButton>> keyboard = new ArrayList<>();
