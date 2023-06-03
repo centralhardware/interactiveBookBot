@@ -92,7 +92,7 @@ public class PartScheduler {
                                     .caption(caption)
                                     .build();
                             sender.send(photo);
-                            sender.sendAction(ActionType.UPLOADPHOTO);
+                            if (!sync) sender.sendAction(ActionType.UPLOADPHOTO);
                             return;
                         }
 
@@ -101,7 +101,7 @@ public class PartScheduler {
                                 .text(paragraph)
                                 .build();
                         sender.send(message);
-                        sender.sendAction(ActionType.TYPING);
+                        if (!sync) sender.sendAction(ActionType.TYPING);
                     };
 
                     if (sync){
