@@ -1,7 +1,7 @@
 package me.centralhardware.telegram.interactiveBookBot.engine;
 
 import me.centralhardware.telegram.interactiveBookBot.engine.Storage.CurrentUser;
-import me.centralhardware.telegram.interactiveBookBot.engine.cache.RedisCache;
+import me.centralhardware.telegram.interactiveBookBot.engine.cache.ReadingTimeCache;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.Pair;
@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
 public class ReadingUtil {
 
     private final CurrentUser currentUser;
-    private final RedisCache cache;
+    private final ReadingTimeCache cache;
 
     public int getReadingTime(String text){
         Integer readingSpeed = currentUser.getReadingSpeed();

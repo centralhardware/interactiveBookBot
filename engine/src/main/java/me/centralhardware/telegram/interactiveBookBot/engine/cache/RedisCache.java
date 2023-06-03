@@ -1,23 +1,23 @@
 package me.centralhardware.telegram.interactiveBookBot.engine.cache;
 
-import me.centralhardware.telegram.interactiveBookBot.engine.hash.Hasher;
-import me.centralhardware.telegram.interactiveBookBot.engine.redis.Redis;
 import jakarta.annotation.PostConstruct;
-import lombok.RequiredArgsConstructor;
+import me.centralhardware.telegram.interactiveBookBot.engine.redis.Redis;
 import org.apache.commons.lang3.BooleanUtils;
-import org.apache.commons.lang3.tuple.Pair;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
-public class RedisCache  implements Cache<Pair<String, Integer>, Integer> {
+public abstract class RedisCache<K, V>  implements Cache<K, V> {
 
-    private static final String CACHE_VALUE_PREFIX = "cache:";
     private static final String CACHE_VALUE_PATTERN = "cache:*";
 
-    private final Redis redis;
-    private final Hasher hasher;
+    @Autowired
+    private Redis redis;
 
+
+    /**
+     * Invalidate cache, if INVALIDATE_CACHE true
+     */
     @PostConstruct
     public void init(){
         if (BooleanUtils.toBoolean(System.getenv("INVALIDATE_CACHE"))){
@@ -26,18 +26,18 @@ public class RedisCache  implements Cache<Pair<String, Integer>, Integer> {
     }
 
     @Override
-    public void set(Pair<String, Integer> key, Integer value) {
-        redis.put(key(hasher.hash(key.getLeft()), key.getRight()), value);
+    public void set(K key, V value) {
+        redis.put(key(key), value);
     }
 
     @Override
-    public Integer get(Pair<String, Integer> key) {
-        return Integer.parseInt(redis.get(key(hasher.hash(key.getLeft()), key.getRight())));
+    public V get(K key) {
+        return value(redis.get(key(key)));
     }
 
     @Override
-    public boolean contains(Pair<String, Integer> key) {
-        return redis.exists(key(hasher.hash(key.getLeft()), key.getRight()));
+    public boolean contains(K key) {
+        return redis.exists(key(key));
     }
 
     @Override
@@ -51,9 +51,15 @@ public class RedisCache  implements Cache<Pair<String, Integer>, Integer> {
                 .forEach(redis::delete);
     }
 
-    private String key(String key, Integer readingSpeed){
-        return CACHE_VALUE_PREFIX + key + ":" + readingSpeed;
-    }
+    /**
+     * Convert {@link K} to string key
+     */
+    protected abstract String key(K key);
+
+    /**
+     * COnvert string value to {@link  V}
+     */
+    protected abstract V value(String value);
 
 
 }
